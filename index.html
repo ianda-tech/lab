@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Lab</title>
+  <meta name="description" content="Games, toys and half-finished experiments.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M24 6h16v4h-3v14l15 26c2 4-1 8-5 8H17c-4 0-7-4-5-8l15-26V10h-3z' fill='%23ff6b2c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Stu's lab · Melbourne</p>
+    <h1>The&nbsp;Lab<span class="dot">.</span></h1>
+    <p class="lede">Games, toys and half-finished experiments. Pick something and press play.</p>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <p class="count" id="count">7 projects</p>
+      <nav class="chips" aria-label="Filter by tag">
+        <button type="button" class="chip" aria-pressed="true" data-tag="">All</button>
+        <button type="button" class="chip" aria-pressed="false" data-tag="arcade">arcade</button>
+        <button type="button" class="chip" aria-pressed="false" data-tag="game">game</button>
+        <button type="button" class="chip" aria-pressed="false" data-tag="kids">kids</button>
+        <button type="button" class="chip" aria-pressed="false" data-tag="learning">learning</button>
+      </nav>
+    </div>
+
+    <section class="grid" aria-label="Projects">
+      <a class="tile" href="balloon-pop/index.html" style="--hue:210" data-tags="game kids learning">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <path d="M40 46 q-4 8 2 14" class="str"/><path d="M62 40 q4 10 -2 20" class="str"/><path d="M84 48 q-3 6 1 12" class="str"/>
+          <ellipse cx="40" cy="30" rx="13" ry="16" fill="#ff5a5a"/><path d="M37 46h6l-3 4z" fill="#ff5a5a"/>
+          <ellipse cx="62" cy="22" rx="14" ry="17" fill="#ffd23d"/><path d="M59 39h6l-3 4z" fill="#ffd23d"/>
+          <ellipse cx="84" cy="33" rx="12" ry="15" fill="#4d8dff"/><path d="M81 48h6l-3 4z" fill="#4d8dff"/>
+          <text x="62" y="29" class="glyph">B</text><text x="84" y="39" class="glyph small">7</text>
+          <ellipse cx="35" cy="23" rx="3" ry="5" fill="#fff" opacity=".55"/><ellipse cx="57" cy="14" rx="3" ry="5" fill="#fff" opacity=".55"/><ellipse cx="80" cy="26" rx="3" ry="5" fill="#fff" opacity=".55"/>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Balloon Pop</span>
+          <span class="tile-desc">Pop the red ones, the letter B or the number 7 as the balloons float up. Learn colours, letters and numbers.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li><li>learning</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="colour-in/index.html" style="--hue:30" data-tags="game kids">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <path d="M22 50 Q40 20 60 40 T100 26" stroke="#ff5a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M22 58 Q44 36 62 50 T100 40" stroke="#4cc96b" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <g transform="rotate(35 80 30)"><rect x="74" y="4" width="12" height="40" rx="3" fill="#a066ff"/><path d="M74 44h12l-6 12z" fill="#ffe0b0"/><path d="M78 52h4l-2 4z" fill="#a066ff"/><rect x="74" y="10" width="12" height="4" fill="#fff" opacity=".5"/></g>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Colour In</span>
+          <span class="tile-desc">Tap-to-fill colouring pages: a fish, a house, a butterfly, a rocket and an ice cream, plus a magic rainbow crayon.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="dress-up/index.html" style="--hue:285" data-tags="game kids">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <circle cx="47" cy="22" r="7" fill="#b07a4f"/><circle cx="73" cy="22" r="7" fill="#b07a4f"/>
+          <circle cx="60" cy="34" r="18" fill="#b07a4f"/><ellipse cx="60" cy="40" rx="9" ry="7" fill="#e6c39c"/>
+          <circle cx="53" cy="31" r="2.4" fill="#2a1d14"/><circle cx="67" cy="31" r="2.4" fill="#2a1d14"/><ellipse cx="60" cy="37" rx="3" ry="2" fill="#2a1d14"/>
+          <path d="M46 16 l4 -12 l5 8 l5 -10 l5 10 l5 -8 l4 12 z" fill="#ffd23d" stroke="#e0a800" stroke-width="1.5"/>
+          <path d="M40 68 L48 52 h24 l8 16z" fill="#ff7ec4"/>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Dress-Up Party</span>
+          <span class="tile-desc">Dress Bear, Bunny, Kitty or Froggy in hats, dresses, boots and crowns, pick somewhere to go, and snap a photo.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="little-bakery/index.html" style="--hue:340" data-tags="game kids">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <path d="M44 38 h32 l-4 26 h-24z" fill="#ffb4cf"/><path d="M48 38 l2 26 M56 38 v26 M64 38 v26 M72 38 l-2 26" stroke="#ff8fb8" stroke-width="2"/>
+          <path d="M40 40 q0 -14 12 -16 q4 -12 16 -6 q12 0 12 14 q2 8 -4 8 h-32 q-6 0 -4 -0z" fill="#fff4fa"/>
+          <circle cx="60" cy="14" r="6" fill="#e8304a"/><path d="M60 8 q2 -6 6 -6" stroke="#4a8a2a" stroke-width="2" fill="none"/>
+          <circle cx="50" cy="32" r="2" fill="#4d8dff"/><circle cx="68" cy="30" r="2" fill="#ffd23d"/><circle cx="58" cy="26" r="2" fill="#4cc96b"/>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Little Bakery</span>
+          <span class="tile-desc">Bake cupcakes, pizza, pancakes or cookies: pop in the ingredients, stir, bake, decorate, then gobble it up.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="monster-munch/index.html" style="--hue:140" data-tags="game kids learning">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <path d="M44 14 l-4 -10 l10 6z M76 14 l4 -10 l-10 6z" fill="#fff4c2"/>
+          <path d="M60 8 c18 0 26 14 26 30 c0 18 -10 26 -26 26 c-16 0 -26 -8 -26 -26 c0 -16 8 -30 26 -30z" fill="#7bd389"/>
+          <circle cx="51" cy="26" r="7" fill="#fff"/><circle cx="69" cy="26" r="7" fill="#fff"/><circle cx="52" cy="27" r="3.2" fill="#23194a"/><circle cx="68" cy="27" r="3.2" fill="#23194a"/>
+          <ellipse cx="60" cy="46" rx="13" ry="9" fill="#5a1f3a"/><path d="M50 39 l3 5 l3 -5z M64 39 l3 5 l3 -5z" fill="#fff"/>
+          <circle cx="98" cy="50" r="8" fill="#ff4d4d"/><path d="M98 42 q2 -5 5 -5" stroke="#4a8a2a" stroke-width="2" fill="none"/>
+          <text x="18" y="44" class="glyph" fill="#23194a">3</text>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Monster Munch</span>
+          <span class="tile-desc">A counting game. The hungry monster asks for three apples or seven cookies, and you feed it exactly that many.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li><li>learning</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="snake/index.html" style="--hue:130" data-tags="game arcade">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <g fill="#2f9e55"><rect x="22" y="40" width="10" height="10" rx="3"/><rect x="33" y="40" width="10" height="10" rx="3"/><rect x="44" y="40" width="10" height="10" rx="3"/><rect x="44" y="29" width="10" height="10" rx="3"/><rect x="44" y="18" width="10" height="10" rx="3"/><rect x="55" y="18" width="10" height="10" rx="3"/><rect x="66" y="18" width="10" height="10" rx="3"/><rect x="77" y="18" width="11" height="11" rx="3"/></g>
+          <circle cx="85" cy="21" r="1.6" fill="#fff"/><circle cx="96" cy="46" r="5" fill="#ff6b2c"/>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Snake</span>
+          <span class="tile-desc">The classic. Eat, grow, don't bite yourself. Works with swipes on a phone.</span>
+          <ul class="tile-tags"><li>game</li><li>arcade</li></ul>
+        </span>
+      </a>
+      <a class="tile" href="toy-doctor/index.html" style="--hue:265" data-tags="game kids">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 120 68">
+          <rect x="34" y="16" width="52" height="40" rx="10" fill="#fff"/><rect x="54" y="24" width="12" height="24" rx="2" fill="#ff5a6e"/><rect x="48" y="30" width="24" height="12" rx="2" fill="#ff5a6e"/>
+          <g transform="rotate(-25 92 50)"><rect x="80" y="44" width="26" height="10" rx="5" fill="#f2c08f"/><rect x="89" y="44" width="8" height="10" fill="#e3a46c"/></g>
+        </svg></span>
+        <span class="tile-body">
+          <span class="tile-title">Toy Doctor</span>
+          <span class="tile-desc">Fix up poorly toys: catch the bugs in Leo's mane, bandage Rex the T-Rex, scrub muddy Robo. For little kids, made for touch screens.</span>
+          <ul class="tile-tags"><li>game</li><li>kids</li></ul>
+        </span>
+      </a>
+    </section>
+    <p class="empty" id="empty" hidden>Nothing with that tag yet.</p>
+  </main>
+
+  <footer>
+    <p>Made in Melbourne. Everything here works offline, just open the page.</p>
+  </footer>
+
+  <script src="hub.js" defer></script>
+</body>
+</html>

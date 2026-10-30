@@ -1,0 +1,23 @@
+:root { --glow: #3fb6ff; --accent: #ff5e7e; --accent-deep: #b3204a; }
+.menu-art svg { width: min(60vw, 300px); margin-top: 1vh; }
+.bob { animation: bob 3s ease-in-out infinite; transform-box: fill-box; }
+.bob.d2 { animation-delay: -1s; } .bob.d3 { animation-delay: -2s; }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(3deg); } }
+.prompt { flex: 1; display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--pill); color: var(--ink);
+  border-radius: 999px; padding: 6px 20px; min-height: 60px; box-shadow: var(--shine), 0 6px 10px rgba(8,4,30,.35); max-width: 420px; cursor: pointer; }
+.target { display: flex; align-items: center; gap: 8px; font-size: 2.1rem; line-height: 1; }
+.swatch { width: 44px; height: 44px; border-radius: 50%; display: inline-block; box-shadow: inset 0 -4px 0 rgba(0,0,0,.18); }
+.target .pic { font-size: 1.9rem; }
+.target .dots { font-size: .8rem; letter-spacing: 1px; max-width: 90px; line-height: 1.1; word-break: break-all; }
+.hits { font-size: 1.4rem; letter-spacing: 2px; }
+.stars { min-width: 58px; text-align: right; font-size: 1.3rem; }
+.sky { position: relative; flex: 1; width: 100%; overflow: hidden; touch-action: none; }
+.balloon { position: absolute; left: 0; top: 0; width: var(--w); height: calc(var(--w) * 1.75); border: 0; padding: 0; background: none; cursor: pointer; will-change: transform; touch-action: none; }
+.balloon svg { width: 100%; height: 100%; overflow: visible; display: block; filter: drop-shadow(0 6px 6px rgba(0,0,0,.25)); }
+.balloon text { font-family: var(--font); font-weight: 800; fill: #fff; text-anchor: middle; dominant-baseline: central; paint-order: stroke; stroke: rgba(0,0,0,.25); stroke-width: 2.5px; }
+.burst { position: absolute; pointer-events: none; font-size: 2.6rem; transform: translate(-50%,-50%); animation: burst .5s ease-out forwards; }
+@keyframes burst { from { transform: translate(-50%,-50%) scale(.4); opacity: 1; } to { transform: translate(-50%,-50%) scale(1.8); opacity: 0; } }
+.shard { position: absolute; width: 12px; height: 12px; border-radius: 3px; pointer-events: none; animation: shard .55s ease-out forwards; }
+@keyframes shard { to { transform: translate(var(--dx), var(--dy)) rotate(200deg); opacity: 0; } }
+.float-word { position: absolute; pointer-events: none; font-size: 1.8rem; text-shadow: 0 2px 6px rgba(0,0,0,.4); transform: translate(-50%,-50%); animation: rise 1s ease-out forwards; }
+@keyframes rise { to { transform: translate(-50%, -160%); opacity: 0; } }

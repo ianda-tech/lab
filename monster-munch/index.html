@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Monster Munch · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="monster.css">
+</head>
+<body>
+  <section id="menu" class="screen scroll active">
+    <a href="../index.html" class="home-link">← Lab</a>
+    <h1>Monster Munch</h1>
+    <p class="subtitle">The monster is hungry! Can you count out its dinner?</p>
+    <div id="menu-monster" class="menu-monster" aria-hidden="true"></div>
+    <button id="start-btn" class="big-btn">Let's feed it! 🍎</button>
+  </section>
+
+  <section id="game" class="screen">
+    <header class="bar">
+      <button id="back-btn" class="round-btn" aria-label="Back">⬅️</button>
+      <div id="bubble" class="bubble" role="button" aria-label="Hear it again">
+        <span id="want-num" class="want-num"></span>
+        <span id="want-slots" class="want-slots"></span>
+      </div>
+      <span id="stars" class="stars">⭐ 0</span>
+    </header>
+    <div class="stage">
+      <div id="monster" class="monster"></div>
+    </div>
+    <p id="hint" class="hint"></p>
+    <nav id="tray" class="tray"></nav>
+  </section>
+  <script src="../kit/kit.js"></script>
+  <script src="monster.js"></script>
+</body>
+</html>

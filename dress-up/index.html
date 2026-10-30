@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👗</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dress-Up Party · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="dress.css">
+</head>
+<body>
+  <section id="dress" class="screen active">
+    <header class="bar">
+      <a href="../index.html" class="round-btn home-round" aria-label="Back to the Lab">🏠</a>
+      <h2>👗 Dress-Up Party</h2>
+      <button id="dice-btn" class="round-btn" aria-label="Surprise outfit">🎲</button>
+      <button id="photo-btn" class="round-btn" aria-label="Take a photo">📸</button>
+    </header>
+    <div class="stage-wrap"><div id="stage" class="stage"></div></div>
+    <p id="hint" class="hint"></p>
+    <nav class="wardrobe">
+      <div id="tabs" class="tabs" role="tablist"></div>
+      <div id="items" class="items"></div>
+    </nav>
+  </section>
+  <div id="flash" class="flash"></div>
+  <div id="party" class="party hidden">
+    <div class="party-card">
+      <div class="polaroid"><img id="snap" alt="Your dress-up photo"></div>
+      <h2 id="party-text">Say cheese!</h2>
+      <div class="btn-row">
+        <a id="save-link" class="big-btn" download="dress-up-party.png">Save photo 💾</a>
+        <button id="close-btn" class="big-btn alt">Keep playing 👗</button>
+      </div>
+    </div>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="dress.js"></script>
+</body>
+</html>

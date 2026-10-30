@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧁</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Little Bakery · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="bakery.css">
+</head>
+<body>
+  <section id="menu" class="screen scroll active">
+    <a href="../index.html" class="home-link">← Lab</a>
+    <h1>🧁 Little Bakery</h1>
+    <p class="subtitle">What shall we bake today?</p>
+    <div id="recipes" class="cards"></div>
+  </section>
+
+  <section id="kitchen" class="screen">
+    <header class="bar">
+      <button id="back-btn" class="round-btn" aria-label="Back to recipes">⬅️</button>
+      <h2 id="recipe-name"></h2>
+      <span class="spacer"></span>
+    </header>
+    <ol id="steps" class="steps" aria-label="Steps"></ol>
+    <div id="bench" class="bench"></div>
+    <p id="hint" class="hint"></p>
+    <nav id="tray" class="tray"></nav>
+  </section>
+
+  <div id="party" class="party hidden">
+    <div class="party-card">
+      <div id="sticker" class="sticker"></div>
+      <h2 id="party-text"></h2>
+      <div class="btn-row">
+        <button id="again-btn" class="big-btn">Bake again 🔁</button>
+        <button id="menu-btn" class="big-btn alt">New recipe 📖</button>
+      </div>
+    </div>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="bakery.js"></script>
+</body>
+</html>

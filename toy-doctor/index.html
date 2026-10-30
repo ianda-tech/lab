@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Toy Doctor · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="doctor.css">
+</head>
+<body>
+  <section id="menu" class="screen scroll active">
+    <a href="../index.html" class="home-link">← Lab</a>
+    <h1>🩺 Toy Doctor</h1>
+    <p class="subtitle">Who's in the waiting room today?</p>
+    <div id="patients" class="cards"></div>
+  </section>
+
+  <section id="clinic" class="screen">
+    <header class="bar">
+      <button id="back-btn" class="round-btn" aria-label="Back to waiting room">⬅️</button>
+      <h2 id="patient-name"></h2>
+      <span id="progress" class="progress"></span>
+    </header>
+    <div class="bench"><div id="box" class="box"></div></div>
+    <p id="hint" class="hint"></p>
+    <nav id="tray" class="tray"></nav>
+  </section>
+
+  <div id="party" class="party hidden">
+    <div class="party-card">
+      <div id="sticker" class="sticker"></div>
+      <h2 id="party-text"></h2>
+      <div class="btn-row">
+        <button id="next-btn" class="big-btn">Next patient ➡️</button>
+        <button id="menu-btn" class="big-btn alt">Waiting room 🪑</button>
+      </div>
+    </div>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="doctor.js"></script>
+</body>
+</html>

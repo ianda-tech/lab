@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖍️</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Colour In · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="colour.css">
+</head>
+<body>
+  <section id="menu" class="screen scroll active">
+    <a href="../index.html" class="home-link">← Lab</a>
+    <h1>🖍️ Colour In</h1>
+    <p class="subtitle">Pick a picture to colour</p>
+    <div id="pictures" class="cards"></div>
+  </section>
+
+  <section id="colouring" class="screen">
+    <header class="bar">
+      <button id="back-btn" class="round-btn" aria-label="Back to pictures">⬅️</button>
+      <h2 id="pic-name"></h2>
+      <button id="done-btn" class="round-btn" aria-label="Finished">✅</button>
+    </header>
+    <div class="page-wrap"><div id="page" class="page"></div></div>
+    <p id="hint" class="hint"></p>
+    <nav id="palette" class="palette" aria-label="Crayons"></nav>
+  </section>
+
+  <div id="party" class="party hidden">
+    <div class="party-card">
+      <div id="framed" class="framed"></div>
+      <h2 id="party-text"></h2>
+      <div class="btn-row">
+        <button id="save-btn" class="big-btn">Save picture 💾</button>
+        <button id="keep-btn" class="big-btn alt">Keep colouring 🖍️</button>
+        <button id="new-btn" class="big-btn alt">New picture</button>
+        <button id="clear-btn" class="big-btn alt">Start again 🧽</button>
+      </div>
+    </div>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="pictures.js"></script>
+  <script src="colour.js"></script>
+</body>
+</html>

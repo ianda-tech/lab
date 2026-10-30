@@ -1,0 +1,18 @@
+:root { --glow: #ff9b3d; --accent: #ffb238; --accent-deep: #c25a00; }
+.card .art { width: 80%; height: 66%; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: inset 0 0 0 3px #ffe3c2; }
+.page-wrap { flex: 1; min-height: 0; width: 100%; display: grid; place-items: center; padding: 6px 12px; }
+.page { height: 100%; max-height: 100%; aspect-ratio: 1; max-width: 100%; background: #fff; border-radius: 26px; overflow: hidden;
+  box-shadow: 0 0 0 8px #fff3, var(--drop); }
+.page svg, .framed svg { width: 100%; height: 100%; display: block; }
+.page .r { cursor: pointer; transition: fill .15s; }
+.palette { width: 100%; display: flex; gap: 10px; overflow-x: auto; padding: 12px 14px 16px; background: rgba(255,255,255,.12);
+  border-top: 2px solid rgba(255,255,255,.25); scrollbar-width: none; justify-content: safe center; }
+.palette::-webkit-scrollbar { display: none; }
+.crayon { flex: 0 0 auto; width: 52px; height: 74px; border: 0; padding: 0; background: none; cursor: pointer; transition: transform .25s var(--spring); }
+.crayon svg { width: 100%; height: 100%; overflow: visible; }
+.crayon.on { transform: translateY(-12px) scale(1.12); }
+.framed { width: min(70vw, 300px); aspect-ratio: 1; margin: 0 auto; border: 12px solid #ffb238; border-radius: 18px; overflow: hidden; background: #fff;
+  box-shadow: inset 0 0 0 4px #c25a00; }
+.sparkle { position: fixed; pointer-events: none; font-size: 1.6rem; transform: translate(-50%,-50%); animation: twinkle .7s ease-out forwards; z-index: 20; }
+@keyframes twinkle { to { transform: translate(-50%,-180%) scale(1.6) rotate(90deg); opacity: 0; } }
+@media (max-height: 600px) { .crayon { width: 42px; height: 60px; } }

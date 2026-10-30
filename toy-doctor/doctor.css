@@ -1,0 +1,23 @@
+:root { --glow: #5fd3c6; --accent: #8ff0e2; --accent-deep: #13786c; }
+.bench { flex: 1; min-height: 0; width: 100%; display: grid; place-items: center; padding: 6px; }
+.box { height: 100%; aspect-ratio: 1; max-width: 94vw; max-height: 100%; position: relative; touch-action: none; }
+.box > svg { width: 100%; height: 100%; display: block; }
+.box.bump { animation: hop .5s var(--spring); }
+.spot { position: absolute; width: 17%; height: 17%; transform: translate(-50%, -50%); border: 0; padding: 0; background: none; display: grid; place-items: center; font-size: clamp(1.6rem, 6vmin, 3.2rem); cursor: pointer; touch-action: none; }
+.spot svg { width: 100%; height: 100%; pointer-events: none; }
+.spot::after { content: ""; position: absolute; inset: -6%; border-radius: 50%; border: 3px dashed #ffffffaa; animation: ring 1.6s linear infinite; pointer-events: none; }
+.spot.fixed::after, .spot.quiet::after { display: none; }
+.spot.fixed { pointer-events: none; }
+.spot.bug { animation: crawl 1.4s ease-in-out infinite alternate; }
+@keyframes crawl { from { translate: -6% 2%; rotate: -12deg; } to { translate: 6% -2%; rotate: 12deg; } }
+@keyframes ring { to { rotate: 360deg; } }
+.spot.gone { transition: transform .6s ease-in, opacity .6s; transform: translate(-50%, -50%) translate(var(--tx), var(--ty)) scale(.3); opacity: 0; }
+.progress { min-width: 48px; text-align: right; font-size: 1.3rem; letter-spacing: 2px; }
+.tray .thing.on { outline: 4px solid #fff; transform: translateY(-6px) scale(1.06); }
+.reading { position: absolute; left: 50%; top: 2%; transform: translateX(-50%); background: #fff; color: #c22; font-weight: 800; padding: 4px 12px; border-radius: 12px; font-size: 1.3rem; box-shadow: 0 4px 10px #0004; }
+.heart { position: absolute; left: 50%; top: 45%; font-size: 4rem; transform: translate(-50%, -50%); pointer-events: none; animation: beat .5s ease-in-out 3; opacity: .9; }
+@keyframes beat { 50% { transform: translate(-50%, -50%) scale(1.3); } }
+.sparkle { position: absolute; pointer-events: none; font-size: 2rem; transform: translate(-50%, -50%); animation: twinkle .8s ease-out forwards; }
+@keyframes twinkle { to { transform: translate(-50%, -150%) scale(1.5); opacity: 0; } }
+.card .cured { position: absolute; top: 6px; right: 8px; font-size: 1.4rem; }
+.card { position: relative; }

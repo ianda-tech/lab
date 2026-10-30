@@ -1,0 +1,92 @@
+/* Playroom kit: shared look for every kids' game in the Lab.
+   Each game sets --glow and --accent / --accent-deep in its own <style>. */
+:root {
+  --ink: #23194a;
+  --night-1: #3a2a8c;
+  --night-2: #17123f;
+  --glow: #ff7aa8;
+  --accent: #ffb238;
+  --accent-deep: #c9730a;
+  --pill: radial-gradient(circle at 32% 22%, #ffffff 0 16%, #fffaf0 17%, #ffeccf 95%);
+  --shine: inset 0 -5px 0 rgba(0,0,0,.15), inset 0 5px 0 rgba(255,255,255,.6);
+  --drop: 0 9px 16px rgba(8,4,30,.45);
+  --spring: cubic-bezier(.34,1.7,.5,1);
+  --font: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Nunito", "Varela Round", "Chalkboard SE", "Comic Sans MS", system-ui, sans-serif;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  font-family: var(--font); font-weight: 700; color: #fff; touch-action: manipulation;
+  background:
+    radial-gradient(circle at 85% 80%, var(--glow) 0, transparent 45%),
+    radial-gradient(circle at 10% 5%, #6b4be0 0, transparent 40%),
+    linear-gradient(var(--night-1), var(--night-2));
+  background-attachment: fixed;
+}
+button { font-family: inherit; font-weight: inherit; color: var(--ink); }
+.screen { display: none; height: 100%; flex-direction: column; align-items: center; position: relative; }
+.screen.active { display: flex; }
+.scroll { overflow-y: auto; padding-bottom: 5vh; }
+.hidden { display: none !important; }
+h1 { font-size: clamp(2.3rem, 8vw, 4.2rem); line-height: 1.05; margin: 8vh 16px 0; text-align: center;
+  text-shadow: 0 .07em 0 var(--accent-deep), 0 .2em .35em rgba(0,0,0,.4); }
+.subtitle { font-size: clamp(1.15rem, 3.4vw, 1.9rem); font-weight: 600; margin: 1vh 16px 3vh; text-align: center; opacity: .92; }
+.home-link { position: absolute; top: 12px; left: 14px; color: #fff; text-decoration: none; font-size: 1rem; opacity: .75; padding: 8px 10px; z-index: 3; }
+.home-link:hover { opacity: 1; }
+.bar { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 14px 4px; }
+.bar h2 { flex: 1; margin: 0; text-align: center; font-size: clamp(1.3rem, 5vw, 2.3rem);
+  text-shadow: 0 .07em 0 var(--accent-deep), 0 .15em .3em rgba(0,0,0,.35); }
+.spacer { width: 58px; flex: 0 0 auto; }
+.round-btn { width: 58px; height: 58px; flex: 0 0 auto; border-radius: 50%; border: 0; background: var(--pill);
+  font-size: 1.7rem; box-shadow: var(--shine), 0 6px 10px rgba(8,4,30,.4); cursor: pointer; transition: transform .25s var(--spring); }
+.round-btn:active { transform: scale(1.15,.85); }
+.hint { min-height: 2.3em; margin: 4px 16px; font-size: clamp(1.05rem, 3.3vw, 1.55rem); text-align: center; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+
+/* Menu cards */
+.cards { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(14px, 4vw, 34px); padding: 0 16px; max-width: 980px; }
+.card { width: clamp(132px, 26vw, 200px); aspect-ratio: 1 / 1.08; border: 0; border-radius: 30px; background: var(--pill);
+  box-shadow: var(--shine), var(--drop); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font-size: clamp(1.1rem, 3vw, 1.5rem); cursor: pointer; transition: transform .25s var(--spring); padding: 10px; }
+.card:hover { transform: translateY(-4px) rotate(-1.5deg); }
+.card:active { transform: scale(1.1,.9); }
+.card .art { width: 72%; height: 62%; display: grid; place-items: center; font-size: clamp(3rem, 9vw, 4.6rem); line-height: 1; }
+.card .art svg { width: 100%; height: 100%; }
+
+.big-btn { border: 0; border-radius: 999px; padding: 16px 30px; font-size: clamp(1.2rem, 3.6vw, 1.7rem); cursor: pointer;
+  background: radial-gradient(circle at 30% 20%, #fff7 0 12%, transparent 13%), linear-gradient(#ffd166, var(--accent));
+  box-shadow: var(--shine), var(--drop); transition: transform .25s var(--spring); }
+.big-btn.alt { background: var(--pill); }
+.big-btn:active { transform: scale(1.1,.9); }
+
+/* Tray of draggable things */
+.tray { width: 100%; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; padding: 10px 12px 16px;
+  background: rgba(255,255,255,.12); border-top: 2px solid rgba(255,255,255,.25); }
+.thing { width: clamp(76px, 18vw, 104px); min-height: clamp(76px, 18vw, 104px); border: 0; border-radius: 24px; background: var(--pill);
+  box-shadow: var(--shine), 0 6px 10px rgba(8,4,30,.35); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  cursor: grab; touch-action: none; transition: transform .25s var(--spring), opacity .2s; padding: 6px 4px; }
+.thing .icon { font-size: clamp(2.2rem, 7vw, 3rem); line-height: 1.1; }
+.thing .label { font-size: .85rem; line-height: 1.1; text-align: center; }
+.thing.dragging { opacity: .35; transform: scale(.9); }
+.thing.on { outline: 5px solid var(--accent); transform: scale(1.06); }
+.thing.used { opacity: .35; }
+.ghost { position: fixed; z-index: 50; pointer-events: none; font-size: 4rem; transform: translate(-50%,-50%) scale(1.1);
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,.35)); }
+
+/* Celebration */
+.party { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; background: rgba(15,8,40,.55); padding: 16px; }
+.party-card { background: var(--pill); color: var(--ink); border-radius: 34px; padding: 26px 26px 30px; text-align: center; box-shadow: var(--drop);
+  max-width: 560px; width: 100%; animation: boing .6s var(--spring); }
+.party-card h2 { font-size: clamp(1.8rem, 6vw, 2.8rem); margin: 6px 0 16px; }
+.party-card .sticker { font-size: 5rem; line-height: 1; animation: wobble 1.4s ease-in-out infinite; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.bits { position: fixed; top: -60px; font-size: 2.2rem; z-index: 60; pointer-events: none; animation: fall linear forwards; }
+@keyframes fall { to { transform: translateY(115vh) rotate(540deg); } }
+@keyframes boing { 0% { transform: scale(.3); } 100% { transform: scale(1); } }
+@keyframes wobble { 0%,100% { transform: rotate(-8deg); } 50% { transform: rotate(8deg) scale(1.08); } }
+@keyframes nope { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-10px); } 40% { transform: translateX(10px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
+.nope { animation: nope .45s; }
+@keyframes hop { 0%,100% { transform: translateY(0); } 40% { transform: translateY(-14px) scale(1.04,.96); } }
+.hop { animation: hop .5s var(--spring); }
+.mute-btn { position: fixed; right: 12px; bottom: 12px; z-index: 30; width: 46px; height: 46px; font-size: 1.3rem; opacity: .85; }
+@media (max-height: 560px) { h1 { margin-top: 3vh; } }
+@media (max-width: 700px) { .tray { padding-right: 62px; } }

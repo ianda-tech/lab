@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎈</text></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Balloon Pop · The Lab</title>
+  <link rel="stylesheet" href="../kit/kit.css">
+  <link rel="stylesheet" href="balloon.css">
+</head>
+<body>
+  <section id="menu" class="screen scroll active">
+    <a href="../index.html" class="home-link">← Lab</a>
+    <h1>Balloon Pop</h1>
+    <div class="menu-art" aria-hidden="true">
+      <svg viewBox="0 0 160 80"><g class="bob"><ellipse cx="40" cy="30" rx="18" ry="22" fill="#ff4d5e"/><path d="M40 52 q-6 12 2 26" stroke="#fff8" fill="none"/></g>
+      <g class="bob d2"><ellipse cx="80" cy="26" rx="18" ry="22" fill="#ffd23d"/><path d="M80 48 q6 12 -2 30" stroke="#fff8" fill="none"/></g>
+      <g class="bob d3"><ellipse cx="120" cy="32" rx="18" ry="22" fill="#4d8dff"/><path d="M120 54 q-4 10 2 24" stroke="#fff8" fill="none"/></g></svg>
+    </div>
+    <p class="subtitle">What shall we pop?</p>
+    <div class="cards">
+      <button class="card" data-mode="colours"><span class="art">🎨</span><span>Colours</span></button>
+      <button class="card" data-mode="letters"><span class="art">🔤</span><span>Letters</span></button>
+      <button class="card" data-mode="numbers"><span class="art">🔢</span><span>Numbers</span></button>
+      <button class="card" data-mode="mix"><span class="art">🌀</span><span>Mix it up</span></button>
+    </div>
+  </section>
+
+  <section id="game" class="screen">
+    <header class="bar">
+      <button id="back-btn" class="round-btn" aria-label="Back">⬅️</button>
+      <div id="prompt" class="prompt"><span id="target" class="target"></span><span id="hits" class="hits"></span></div>
+      <span id="stars" class="stars"></span>
+    </header>
+    <p id="hint" class="hint"></p>
+    <div id="sky" class="sky"></div>
+  </section>
+
+  <div id="party" class="party hidden">
+    <div class="party-card">
+      <div class="sticker">🎈</div>
+      <h2>Super popper!</h2>
+      <div class="btn-row">
+        <button id="again-btn" class="big-btn">Again! 🔁</button>
+        <button id="menu-btn" class="big-btn alt">Something else</button>
+      </div>
+    </div>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="balloon.js"></script>
+</body>
+</html>
