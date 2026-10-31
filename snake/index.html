@@ -4,42 +4,34 @@
   <meta charset="utf-8">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Snake · The Lab</title>
-  <style>
-    :root { --bg: #0f1a14; --board: #18281e; --grid: #1d3024; --snake: #8be28f; --snake-dark: #4fae5f; --food: #ff7b3a; --text: #eaf5ec; --muted: #8fa894;
-      --font: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", system-ui, sans-serif; }
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html, body { height: 100%; margin: 0; }
-    body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 12px;
-      background: radial-gradient(circle at 50% 0, #1d3326, var(--bg) 70%); color: var(--text); font-family: var(--font);
-      touch-action: none; user-select: none; -webkit-user-select: none; overscroll-behavior: none; }
-    .size { width: min(92vw, 62vh, 540px); }
-    header { display: flex; justify-content: space-between; align-items: baseline; }
-    header a { color: var(--muted); text-decoration: none; font-size: .95rem; padding: 6px 0; }
-    .score { font-size: 1.5rem; font-weight: 800; }
-    .best { color: var(--muted); font-size: .9rem; margin-left: 8px; }
-    canvas { display: block; aspect-ratio: 1; border-radius: 18px; background: var(--board); box-shadow: 0 18px 40px -18px #000; }
-    p { margin: 0; color: var(--muted); font-size: .92rem; text-align: center; min-height: 1.4em; }
-    .pad { display: grid; grid-template-columns: repeat(3, 64px); grid-template-rows: repeat(2, 56px); gap: 8px; }
-    .pad button { border: 0; border-radius: 16px; background: #23392b; color: var(--text); font-size: 1.5rem; cursor: pointer; }
-    .pad button:active { background: #2f4d3a; }
-    .pad .up { grid-column: 2; } .pad .left { grid-column: 1; grid-row: 2; } .pad .down { grid-column: 2; grid-row: 2; } .pad .right { grid-column: 3; grid-row: 2; }
-    @media (hover: hover) and (pointer: fine) { .pad { display: none; } }
-  </style>
+  <title>Snake 2 · The Lab</title>
+  <link rel="stylesheet" href="snake.css">
 </head>
 <body>
-  <header class="size">
+  <header class="size top">
     <a href="../index.html">← Lab</a>
-    <span><span class="score" id="score">0</span><span class="best" id="best"></span></span>
+    <div class="title"><b>Snake 2</b><span id="lvl-name"></span></div>
+    <span class="scores"><span class="score" id="score">0</span><span class="best" id="best"></span></span>
   </header>
-  <canvas id="board" class="size" width="600" height="600" aria-label="Snake board"></canvas>
-  <p id="msg">Arrow keys or WASD, or swipe. Space or tap to start. P to pause.</p>
+  <div class="size hud">
+    <span id="lives" class="lives" aria-label="Lives"></span>
+    <span class="goal" title="Apples to clear the level"><span id="eaten">0/0</span><i class="gbar"><i id="gfill"></i></i></span>
+    <span id="effects" class="effects" aria-label="Active power-ups"></span>
+    <button id="pause-btn" class="hud-btn" aria-label="Pause">⏸</button>
+  </div>
+  <div class="size stage" id="stage">
+    <canvas id="board" width="720" height="720" aria-label="Snake 2 board"></canvas>
+    <div id="overlay" class="overlay"></div>
+  </div>
+  <p id="msg">Arrows or WASD, swipe on a phone. P to pause.</p>
   <div class="pad" aria-label="Direction buttons">
     <button class="up" data-d="0,-1" aria-label="Up">▲</button>
     <button class="left" data-d="-1,0" aria-label="Left">◀</button>
     <button class="down" data-d="0,1" aria-label="Down">▼</button>
     <button class="right" data-d="1,0" aria-label="Right">▶</button>
   </div>
+  <script src="../kit/kit.js"></script>
+  <script src="levels.js"></script>
   <script src="snake.js"></script>
 </body>
 </html>
