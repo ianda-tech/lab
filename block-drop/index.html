@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect x=%2210%22 y=%2255%22 width=%2226%22 height=%2226%22 rx=%225%22 fill=%22%23b48cff%22/><rect x=%2237%22 y=%2255%22 width=%2226%22 height=%2226%22 rx=%225%22 fill=%22%23b48cff%22/><rect x=%2264%22 y=%2255%22 width=%2226%22 height=%2226%22 rx=%225%22 fill=%22%23b48cff%22/><rect x=%2237%22 y=%2228%22 width=%2226%22 height=%2226%22 rx=%225%22 fill=%22%23b48cff%22/></svg>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Block Drop · The Lab</title>
+  <link rel="stylesheet" href="block-drop.css">
+</head>
+<body>
+  <header class="top">
+    <a href="../index.html">← Lab</a>
+    <div class="title"><b>Block Drop</b><span id="sub">Level 1</span></div>
+    <span class="scores"><span class="score" id="score">0</span><span class="best" id="best">Best 0</span></span>
+  </header>
+  <main class="game">
+    <aside class="side left">
+      <section class="box"><h3>Hold <kbd>C</kbd></h3><canvas id="hold" width="120" height="80"></canvas></section>
+      <section class="box stats">
+        <div><small>Level</small><b id="level">1</b></div>
+        <div><small>Lines</small><b id="lines">0</b></div>
+        <div><small>Combo</small><b id="combo">–</b></div>
+      </section>
+      <button id="pause-btn" class="hud-btn" aria-label="Pause">⏸</button>
+    </aside>
+    <div class="well" id="well">
+      <canvas id="board" width="360" height="720" aria-label="Block Drop board"></canvas>
+      <div id="pop" class="pop" aria-live="polite"></div>
+      <div id="overlay" class="overlay"></div>
+    </div>
+    <aside class="side right">
+      <section class="box"><h3>Next</h3><canvas id="next" width="120" height="240"></canvas></section>
+    </aside>
+  </main>
+  <p id="msg">Arrows or WASD move · Up/X rotate · Z back · Space drop · C hold · P pause</p>
+  <div class="pad" aria-label="Controls">
+    <button data-b="hold" class="b-hold" aria-label="Hold">Hold</button>
+    <button data-b="ccw" class="b-ccw" aria-label="Rotate left">⟲</button>
+    <button data-b="cw" class="b-cw" aria-label="Rotate right">⟳</button>
+    <button data-b="hard" class="b-hard" aria-label="Hard drop">⤓</button>
+    <button data-b="left" class="b-left" aria-label="Left">◀</button>
+    <button data-b="soft" class="b-soft" aria-label="Soft drop">▼</button>
+    <button data-b="right" class="b-right" aria-label="Right">▶</button>
+  </div>
+  <script src="../kit/kit.js"></script>
+  <script src="block-drop.js"></script>
+</body>
+</html>
